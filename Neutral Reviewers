@@ -1,0 +1,5 @@
+SELECT DISTINCT reviewer_name
+FROM reviewers r
+join ratings rt 
+on r.reviewer_id=rt.reviewer_id
+where rt.reviewer_stars IS NULL;
