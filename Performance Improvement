@@ -1,0 +1,5 @@
+SELECT t1.TestId 
+FROM Tests t1 
+JOIN Tests t2 
+ON t1.TestId = t2.TestId + 1 
+WHERE t1.marks > t2.marks;
