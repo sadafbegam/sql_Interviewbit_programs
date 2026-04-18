@@ -1,0 +1,4 @@
+select Name,Marks,
+lead(Marks) OVER (order by Marks) forward,
+lag(Marks) OVER (order by Marks) rewind
+from Students
