@@ -1,0 +1,7 @@
+SELECT SUM(DISTINCT J.Salary) AS Salary
+FROM Students S
+INNER JOIN Departments D ON S.DepartmentId = D.DepartmentId
+INNER JOIN Jobs J ON S.Id = J.Id
+WHERE D.DepartmentName = 'CSE'
+GROUP BY D.DepartmentName
+ORDER BY D.DepartmentName;
