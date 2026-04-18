@@ -1,0 +1,7 @@
+select m.movie_title as movie_title,
+m.movie_year as movie_year,
+concat(d.director_first_name,d.director_last_name) as director_name,
+concat(a.actor_first_name,a.actor_last_name) as actor_name,mc.role as role
+from movies_cast mc,movies m, movies_directors md, directors d, actors a
+where a.actor_id=mc.actor_id and mc.movie_id=m.movie_id and m.movie_id=md.movie_id and md.director_id=d.director_id
+order by m.movie_time asc limit 1
