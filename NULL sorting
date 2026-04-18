@@ -1,0 +1,7 @@
+select Name
+from (
+select Id,Name,Marks,
+case when Marks='Absent' then 0 else 1 end as is_absent
+from Students
+) x
+order by is_absent desc,Marks desc,Name
