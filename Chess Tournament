@@ -1,0 +1,6 @@
+SELECT p.Name
+FROM Players p
+JOIN Matches m ON p.id = m.id
+group by p.id,p.Name
+having SUM(m.Result) >= 1
+ AND COUNT(*)-SUM(m.Result)<=1;
