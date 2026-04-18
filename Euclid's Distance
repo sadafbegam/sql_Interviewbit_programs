@@ -1,0 +1,2 @@
+SELECT SQRT((MAX(XCoordinate) - MIN(XCoordinate)) * (MAX(XCoordinate) - MIN(XCoordinate)) + (MAX(YCoordinate) - MIN(YCoordinate)) * (MAX(YCoordinate) - MIN(YCoordinate))) 
+as A FROM HOUSES;
