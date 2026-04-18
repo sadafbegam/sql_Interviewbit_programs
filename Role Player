@@ -1,0 +1,4 @@
+SELECT 
+    CONCAT(Player, '(', LEFT(Role, 1), ')') AS N
+FROM GAMERS
+ORDER BY Player;
