@@ -1,0 +1,5 @@
+SELECT A.Name AS Labourer1, B.Name AS Labourer2, A.Country
+FROM LABOURERS A, LABOURERS B
+WHERE A.ID <> B.ID
+AND A.Country = B.Country
+ORDER BY A.Name, B.Name, A.Country;
