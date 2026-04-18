@@ -1,0 +1,8 @@
+select CONCAT(s.Name, ',' ,j.Date) as Offers 
+from Students s 
+join Departments d 
+on (s.DepartmentId=d.DepartmentId) 
+left join Jobs j 
+on (s.Id=j.Id) 
+where j.Date is not NULL 
+order by d.DepartmentName;
